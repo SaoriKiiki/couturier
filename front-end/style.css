@@ -75,6 +75,9 @@ a.margin-right {
   display: flex;
   flex-direction: column;
 }
+.montaña {
+  background-color: #6faadc;
+}
 /*Segundo Paisaje*/
 .estereo-dos {
   grid-area: estereo2;
