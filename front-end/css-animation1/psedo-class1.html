@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+        body {
+          margin: 0;
+          font-family: "Lilita One", cursive;
+        }
+        a:link {
+            color: hotpink;
+        }
+        a:visited {
+            color: Tomato;
+
+        }
+        a:hover {
+            background-color: rgb( 255, 234, 230)
+        }
+        p:not(.line_up){
+            color: lightseagreen;
+        }
+        div::before {
+            content: ":)";
+        }
+        div::after {
+            content: ":(";
+        }
+    </style>
 </head>
 <body>
-    
+    <div>
+        <a href="/">Line Up</a>
+        <p> Line Up </p>
+        <p class="line_up"> Line Up</p>
+    </div>
 </body>
 </html>
