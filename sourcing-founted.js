@@ -1,28 +1,25 @@
-const mainBox = document.querySelector('.motors-container');
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault();
 
-const motors = []
-motors.push({
-    name: 'Rober-Rubson',
-    price: 55500,
-    image: 'https://images.pexels.com/photos/2611686/pexels-photo-2611686.jpeg?auto=compress&cs=tinysrgb&w=300',
-});
-motors.push({
-    name: 'Marilyn-Hub',
-    price: 66600,
-    image: 'https://images.pexels.com/photos/1715184/pexels-photo-1715184.jpeg?auto=compress&cs=tinysrgb&w=300',
-});
+  const formData = new FormData(event.target);
 
-function loadScreen(array) {
-
-    for ( motor of motors) {
-        const motorBoard = document.createElement('div');
-        const motorImage = document.createElement('img');
-
-        motorBoard.classList.add('bulb-card');
-        motorImage.setAttribute('src', motor.image);
-        motorBoard.appendChild(motorImage);
-        mainBox.appendChild(motorBoard);
+  fetch('submit_form.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      return response.text();
+    } else {
+      throw new Error('Error in form submission.');
     }
-}
-
-loadScreen(motors)
+  })
+  .then(data => {
+    console.log('Form submitted successfully:', data);
+    // Redirect or show success message
+  })
+  .catch(error => {
+    console.error('Error in form submission:', error);
+    // Redirect or show error message
+  });
+});
