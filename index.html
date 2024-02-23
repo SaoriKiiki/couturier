@@ -1,67 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Saori Online" />
-    <meta name="description" content="Front-end Development" />
-    <title>Moto</title>
-    <link href="./front-end/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <nav class="cielo-uno">
-      <div>
-        <img
-          class="hamburger"
-          src="https://www.festivalestereopicnic.com/assets/etapa5/menu/hamburguesa.png"
-        />;
-      </div>
-      <div>
-        <img
-          class="inner-title"
-          src="https://www.festivalestereopicnic.com/assets/etapa4/logodesktop.png"
-        />
-      </div>
-      <div>
-        <a class="margin-left" target="_blank" class="init-activ"
-          >COMPRAS INTERNACIONALES</a
-        >
-        <a class="margin-right" target="_blank" class="second-activ"
-          >ENTRADAS</a
-        >
-      </div>
-    </nav>
-    <main>
-      <div class="estereo-tres">
-        <div class="montaña">
-          <img
-            src="https://www.festivalestereopicnic.com/assets/etapa4/inicio/montainsprincipal.png"
-          />
-        </div>
-      </div>
-
-      <div class="estereo-dos">
-        <img src="./assets/estereo3.jpg" />
-        <img src="./assets/estereo2.jpg" />
-      </div>
-      <div class="sky-purple">
-        <img src="./assets/Purple-sky.jpg" />
-      </div>
-      <div class="tickets">
-        <img src="./assets/Entradas.jpg" />
-      </div>
-      <div class="combos-trans">
-        <img src="./assets/buses-combos.jpg" />
-      </div>
-      <div class="stereo-memo">
-        <img src="./assets/memorias-estereo.jpg" />
-      </div>
-    </main>
-    <footer>
-      <div class="despedida">
-        <img src="./assets/instagram-logos.jpg" />
-      </div>
-    </footer>
-    <script src="sourcing-founted.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interview Form</h1>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+            
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position" required>
+            
+            <label for="interview_date">Interview Date:</label>
+            <input type="date" id="interview_date" name="interview_date" required>
+            
+            <label for="interview_time">Interview Time:</label>
+            <input type="time" id="interview_time" name="interview_time" required>
+            
+            <label for="interview_location">Interview Location:</label>
+            <input type="text" id="interview_location" name="interview_location" required>
+            
+            <label for="interviewer_name">Interviewer Name:</label>
+            <input type="text" id="interviewer_name" name="interviewer_name" required>
+            
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
 </html>
